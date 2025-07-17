@@ -1,0 +1,145 @@
+.dashboard-container{
+    padding: 1rem;
+
+}
+
+.dashboard-header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 25px;
+    padding: 1rem;
+}
+
+.dashboard-header-item{
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+}
+
+.dashboard-item-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+
+.dashboard-item-img.red{
+    background-color:#FEE2E2 ;
+}
+
+.dashboard-item-img.green{
+    background-color:#D2F4EE ;
+}
+
+.dashboard-item-img.blue{
+    background-color:#DBEAFE ;
+}
+
+.dashboard-item-img.purple{
+    background-color:#F3E8FF ;
+}
+
+
+.dashboard-item-img img{
+    width: 30px;
+    height: 30px;
+}
+
+.dashboard-item-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dashboard-item-texts .text-title{
+    font-weight:700;
+    font-size: 18px;
+}
+
+.dashboard-item-texts .text-subtitle{
+    color: #6f6b7d;
+    font-weight: 600;
+}
+
+
+.dashboard-items{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.dashboard-sales-bars{
+    width: 100%;
+    padding-top: 1rem;
+    padding: 1rem;
+
+}
+
+.sales-bar-container{
+    background-color: white;
+    padding: 1.85rem 1rem 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.sales-bar-titles p,.sales-radar-titles p{
+    padding: .5rem 0;
+    color: #2F2B3D8C;
+    font-weight: 600;
+}
+
+.dashboard-sales-radar{
+    padding: 1rem;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+
+}
+
+.sales-radar-container{
+    background-color: white;
+    padding: 1.85rem 1rem 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.dashboard-sales-category{
+
+
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+    padding: 1rem;
+}
+
+.sales-category-container{
+    background-color: white;
+    padding: 1.85rem 1rem 0.5rem 1rem;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.sales-category{
+    padding-top: 1rem;
+}
+
+@media (max-width: 950px) {
+
+    .dashboard-sales-radar,.dashboard-sales-category{
+        min-width: 100%;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .dashboard-container{
+        padding: 0;
+    }
+
+    .dashboard-header{
+        gap: 1rem;
+    }
+
+}

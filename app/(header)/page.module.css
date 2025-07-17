@@ -1,0 +1,566 @@
+.hero-container{
+
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-page{
+  background-color: #F6F6F6;
+
+  
+}
+
+
+.hero-image{
+  width: 45%;    
+  transform: scaleX(-1);
+  
+}
+
+.hero-image img{
+  width: 100%;
+}
+
+.hero-texts{
+  width: 50%;
+  padding: 3rem 0;
+
+}
+
+.hero-texts h1{
+  font-size: 45px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
+.hero-texts h3{
+  padding: 1rem 0 2.5rem ;
+  font-size: 20px;
+}
+
+.hero-texts a{
+  padding: 12px 16px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border: 5px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background-color: #FFC220;
+  text-decoration: none;
+
+}
+
+
+.primary-color{
+  color: #DF1E82;
+}
+
+.category-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  width: 95%;
+  margin: auto;
+
+}
+
+.category-item{
+  padding: 26px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ebebeb;
+  border-color: #e4e4e4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.category-item p{
+  padding-top: 16px;
+  text-align: center;
+}
+
+
+.banner-container{
+  background-color: #0071DC;
+
+}
+.banner{
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+  color: white;
+  padding: 2.5rem;
+  display: flex;
+  gap: 50px;
+  
+}
+
+.banner-texts{
+  width: 55%;
+}
+
+.banner-texts h2{
+  font-size: 28px;
+  padding-bottom: 1.5rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+
+}
+
+.banner-texts p{
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 2rem;
+}
+
+.banner-texts a{
+  padding: 10px 16px;
+  font-size: 17px;
+  border: none;
+  font-weight: 00;
+  border-radius: 1px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  background-color: #FFC220;
+  color: white;
+  text-decoration: none;
+}
+
+.banner-img{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.banner-img img{
+  width: 100%;
+  max-width: 480px;
+}
+
+.img-transform{
+  transform: scaleX(-1);
+}
+
+.banner-texts ul{
+  list-style-type:disc;
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+
+.banner-texts ul li{
+  padding: 0.5rem;
+}
+
+/* landing about us */
+
+.landing-about-us{
+  width: 95%;
+  margin: auto;
+}
+
+.landing-about-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 3rem 0;
+  gap: 20px;
+}
+
+.landing-about-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-about-item .img-container{
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid #EAEAEA;
+  border:1px solid #dadada;
+  border-radius: 100%;
+}
+
+.landing-about-item h3{
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.landing-about-item p{
+  width: 80%;
+  text-align: center;
+}
+
+/* fill-banner */
+
+.fill-banner{
+  padding: 3.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+
+.fill-banner h3{
+  font-size: 35px;
+}
+
+.fill-banner p{
+  padding: 1rem 0 2rem;
+  font-size: 20px;
+}
+
+.fill-banner a{
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  background-color: #06CF9C;
+  border-radius: 3px;
+  text-align: center;
+}
+
+
+.landing-products-title{
+  width: 90%;
+  margin: auto;
+  font-size: 28px;
+  padding: 4rem 0 2rem;
+  text-align: center;
+ text-transform: capitalize;
+
+}
+
+.landing-products-title h3{
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+}
+
+
+.landing-products-container{
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap:1rem;
+}
+
+
+
+.about-us-item div h3{
+    padding-bottom:0.5rem;
+}
+
+.about-testimonial-grid{
+    padding-top: 4rem;
+    width: 80%;
+    gap: 40px;
+    margin: auto;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.testimonial{
+    box-shadow: 0 8px 16px 5px #3a3a3a1f;
+    border: 10px;
+    padding: 2rem 2rem 1rem 2rem;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.testimonial-circle{
+    width: 65px;
+    height: 65px;
+    min-height: 65px;
+    min-width: 65px;
+    position: absolute;
+    top: -35px; /* Mitad del ancho del círculo para alinearlo en la mitad superior */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-us-titles{
+  padding-top: 2rem;
+    text-align: center;
+}
+
+.about-us-titles h3 {
+    font-size: 35px;
+    padding-top: 2rem;
+    font-weight: 600;
+}
+
+.about-us-titles h4{
+  padding-top: 1rem;
+    font-size: 20px;
+    padding: 0 1rem;
+    color: #7e7e7e;
+}
+
+.about-testimonial h3{
+    padding: 0.5rem 0 0rem;
+    font-size: 16px;
+}
+
+.about-testimonial h4{
+    font-size: 15px;
+    color: #899bff;
+}
+
+.about-testimonial p{
+    padding: 1rem 0;
+}
+
+.testimonial-footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(61, 61, 61);
+    border-top: 1px solid #e2e2e2;
+}
+
+.testimonial-footer p{
+    padding-top: 10px;
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .landing-products-container{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
+
+}
+
+
+@media (max-width: 950px) {
+
+    .hero-texts h1{
+      font-size: 35px;
+    }
+
+    .hero-texts h3{
+      font-size: 18px;
+    }
+
+      
+  .landing-products-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .landing-products-title h3,.about-us-titles h3{
+    font-size: 30px;
+  }
+
+  .banner-texts h2{
+    font-size: 25px;
+  }
+
+  .banner-texts p{
+    font-size: 17px;
+  }
+
+  .fill-banner h3{
+    font-size: 30px;
+  }
+
+  .fill-banner p{
+    font-size: 19px;
+  }
+
+
+}
+
+
+@media (max-width: 850px) {
+
+  .hero-container{
+    flex-direction: column-reverse;
+  }
+
+  .hero-image{
+    width: 50%;
+  }
+
+  .hero-texts{
+    width: 100%;
+    padding: 0rem 0rem 3rem;
+  }
+
+  .hero-texts h1{
+    font-size: 30px;
+  }
+
+  .hero-texts h3{
+    font-size: 17px;
+  }
+
+  .banner{
+    flex-direction: column;
+  }
+
+  .banner.reverse{
+    flex-direction: column-reverse;
+  }
+
+  .banner-img{
+    width: 60%;
+    margin: auto;
+  }
+  .banner-texts{
+    width: 100%;
+  }
+
+  .landing-about-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+
+
+}
+
+
+@media (max-width: 750px) {
+
+  .category-container{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .hero-image{
+    width: 60%;
+  }
+
+  .landing-products-container{
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+
+  .landing-products-title h3{
+    font-size: 25px;
+  }
+
+  .banner-img{
+    width:70%;
+  }
+
+
+  .about-testimonial-grid{
+    grid-template-columns: repeat(1,1fr);
+
+  }
+  
+  .banner-texts h2{
+    font-size: 25px;
+  }
+
+
+  .fill-banner h3{
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .fill-banner p{
+    text-align: center;
+
+    font-size: 17px;
+    padding-bottom: 1rem;
+  }
+
+  .about-us-titles h3{
+    font-size: 25px;
+  }
+
+  .about-us-titles h4{
+    font-size: 18px;
+  }
+
+
+}
+
+@media (max-width: 550px) {
+
+  .fill-banner{
+    padding-top: 1rem;
+  }
+
+  .hero-texts h1{
+    font-size: 28px;
+  }
+
+
+  .banner{
+    padding: 3rem 2.5rem;
+  }
+    
+  .banner-texts h2{
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .banner-texts p{
+    font-size: 16px;
+    padding-bottom: 2rem;
+  }
+
+
+  .banner-img{
+    width:80%;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+
+  .landing-products-container{
+    grid-template-columns: repeat(1,1fr);
+    padding: 0rem 1rem;
+  }
+
+  .landing-about-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .banner-img{
+    width:90%;
+  }
+  
+  
+  .banner-texts h2{
+    font-size: 20px;
+  }
+
+
+}
+
