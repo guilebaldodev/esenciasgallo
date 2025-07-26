@@ -1,4 +1,4 @@
-import {flowerDescription } from "./description";
+import {flowerDescription, perfumeDescription } from "./description";
 
 export interface Product {
   id: number;
@@ -12,134 +12,103 @@ export interface Product {
 
 
 
-export const flowerCatalog: Product[] = [
-  // RAMOS
+export const perfumeCatalog: Product[] = [
   {
     id: 1,
-    titulo: "Ramo de 100 Rosas Rojas",
-    descripcion: flowerDescription,
-    precio: 1800,
-    anterior: 2000,
+    titulo: "Dior Sauvage Eau de Toilette 100ml",
+    descripcion: perfumeDescription,
+    precio: 2200,
+    anterior: 2500,
     img: [
-      "/products/flowers/product-1/product-1-1.webp",
-      "/products/flowers/product-1/product-1-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Ramos",
+    categoria: "Dior",
   },
   {
     id: 2,
-    titulo: "Ramo de Mini Rosas Rosadas y Estate",
-    descripcion: flowerDescription,
-    precio: 550,
+    titulo: "Chanel Bleu de Chanel Parfum 100ml",
+    descripcion: perfumeDescription,
+    precio: 2700,
     img: [
-      "/products/flowers/product-2/product-2-1.webp",
-      "/products/flowers/product-2/product-2-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Ramos",
+    categoria: "Chanel",
   },
   {
     id: 3,
-    titulo: "Ramo de Mini Rosas Amarillas ",
-    descripcion: flowerDescription,
-    precio: 620,
+    titulo: "Versace Eros Flame 100ml",
+    descripcion: perfumeDescription,
+    precio: 2100,
     img: [
-      "/products/flowers/product-3/product-3-1.webp",
-      "/products/flowers/product-3/product-3-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Ramos",
+    categoria: "Versace",
   },
   {
     id: 4,
-    titulo: "Ramo de Rosas Rosa, Lilis y Matsumoto",
-    descripcion: flowerDescription,
-    precio: 610,
+    titulo: "Yves Saint Laurent Y EDT 100ml",
+    descripcion: perfumeDescription,
+    precio: 2400,
     img: [
-      "/products/flowers/product-4/product-4-1.webp",
-      "/products/flowers/product-4/product-4-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Ramos",
+    categoria: "YSL",
   },
-
-  // FLOREROS
   {
     id: 5,
-    titulo: "Florero de Gerberas y Girasoles",
-    descripcion: flowerDescription,
-    precio: 920,
+    titulo: "Carolina Herrera Bad Boy 100ml",
+    descripcion: perfumeDescription,
+    precio: 2300,
+    anterior: 2600,
     img: [
-      "/products/flowers/product-5/product-5-1.webp",
-      "/products/flowers/product-5/product-5-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Floreros",
+    categoria: "Carolina Herrera",
   },
   {
     id: 6,
-    titulo: "Florero Rosas Amarillas",
-    descripcion: flowerDescription,
-    precio: 940,
+    titulo: "Paco Rabanne Invictus 100ml",
+    descripcion: perfumeDescription,
+    precio: 2000,
     img: [
-      "/products/flowers/product-6/product-6-1.webp",
-      "/products/flowers/product-6/product-6-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Floreros",
+    categoria: "Paco Rabanne",
   },
   {
     id: 7,
-    titulo: "Globo Burbuja de 24",
-    descripcion: flowerDescription,
-    precio: 900,
-    anterior: 100,
+    titulo: "Montblanc Legend Spirit 100ml",
+    descripcion: perfumeDescription,
+    precio: 1850,
     img: [
-      "/products/flowers/product-7/product-7-1.webp",
-      "/products/flowers/product-7/product-7-2.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Globos",
+    categoria: "Montblanc",
   },
   {
     id: 8,
-    titulo: "Bunch de Globos",
-    descripcion: flowerDescription,
-    precio: 1400,
+    titulo: "Jean Paul Gaultier Le Male 125ml",
+    descripcion: perfumeDescription,
+    precio: 2650,
     img: [
-      "/products/flowers/product-8/product-8-1.webp",
+      "/products/perfum/product-1/product-1-1.jpg",
     ],
-    categoria: "Globos",
-  },
-
-  // ROSAS
-  {
-    id: 9,
-    titulo: "Caja de Rosas Rojas",
-    descripcion: flowerDescription,
-    precio: 2100,
-    img: [
-      "/products/flowers/product-9/product-9-1.webp",
-      "/products/flowers/product-9/product-9-2.webp",
-    ],
-    categoria: "Cajas",
-  },
-
-  // CAJAS DE REGALO
-  {
-    id: 10,
-    titulo: "Caja de Rosas Amarillas",
-    descripcion: flowerDescription,
-    precio: 1950,
-    img: [
-      "/products/flowers/product-10/product-10-1.webp",
-      "/products/flowers/product-10/product-10-2.webp",
-    ],
-    categoria: "Cajas",
+    categoria: "Jean Paul Gaultier",
   },
 ];
+
+
 
 export const categoryOptions = [
-  { value: "Ramos", label: "Ramos" },
-  { value: "Floreros", label: "Floreros" },
-  { value: "Globos", label: "Globos" },
-  { value: "Cajas", label: "Cajas" },
+  { value: "Dior", label: "Dior" },
+  { value: "Chanel", label: "Chanel" },
+  { value: "Versace", label: "Versace" },
+  { value: "YSL", label: "YSL" },
+  { value: "Carolina Herrera", label: "Carolina Herrera" },
+  { value: "Paco Rabanne", label: "Paco Rabanne" },
+  { value: "Montblanc", label: "Montblanc" },
+  { value: "Jean Paul Gaultier", label: "Jean Paul Gaultier" },
 ];
-
 
 export const flowerSales = [
   {

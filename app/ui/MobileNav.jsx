@@ -5,7 +5,7 @@ import style from "./css/header.module.css";
 
 const MobileMenu = ({ onClose }) => {
   const message = encodeURIComponent(
-    "¡Hola! Me gustaría recibir más información sobre sus servicios."
+    "¡Hola! Me gustaría recibir más información sobre sus perfumes."
   );
   const whatsAppURL = `https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${message}`;
 
@@ -19,7 +19,7 @@ const MobileMenu = ({ onClose }) => {
             width={40}
             height={40}
           />
-          <p className={style["menu-title"]}>Flores MX</p>
+          <p className={style["menu-title"]}>Esencias Gallo</p>
         </div>
         <Image
           className={style["menu-close-icon"]}

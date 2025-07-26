@@ -1,18 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { flowerCatalog } from "@/consts";
+import { categoryOptions, perfumeCatalog } from "@/consts";
 import ProductCard from "@/app/ui/Product";
 import styles from "@/app/(header)/catalogo/page.module.css";
 import Select from "react-select";
 import { useSearchParams } from "next/navigation";
-
-const categoryOptions = [
-  { value: "Ramos", label: "Ramos" },
-  { value: "Floreros", label: "Floreros" },
-  { value: "Globos", label: "Globos" },
-  { value: "Cajas", label: "Cajas" },
-];
 
 const CatalogPage = () => {
 
@@ -20,7 +13,7 @@ const CatalogPage = () => {
   const searchQuery = searchParams.get("busqueda")?.toLowerCase() || "";
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const filteredCatalog = flowerCatalog.filter((product) => {
+  const filteredCatalog = perfumeCatalog.filter((product) => {
     const matchesCategory = selectedCategory
       ? product.categoria === selectedCategory
       : true;

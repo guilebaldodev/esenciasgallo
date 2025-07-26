@@ -1,39 +1,47 @@
 import AccordionItem from "@/app/ui/AccordionItem";
-
-const faqData = [
+export const faqData = [
   {
-    question: '¿Cómo puedo hacer un pedido en Flores MX?',
-    answer: 'Selecciona el arreglo o ramo que más te guste y haz clic en "Haz tu pedido". Serás redirigido a un chat de WhatsApp donde coordinaremos los detalles de entrega y pago.',
+    question: '¿Son originales?',
+    answer:
+      'Sí, todos nuestros perfumes son originales. Trabajamos de la mano con marcas reconocidas y distribuidores autorizados para garantizar su autenticidad.',
+  },
+  {
+    question: '¿Cuántas piezas puedo comprar?',
+    answer:
+      'Puedes comprar desde 1 pieza. También brindamos precios especiales a mayoristas desde las 4 piezas.',
   },
   {
     question: '¿Qué métodos de pago aceptan?',
-    answer: 'Aceptamos pagos mediante transferencia bancaria, tarjetas de débito/crédito y depósitos en OXXO. Durante el proceso por WhatsApp podrás elegir tu método preferido.',
+    answer:
+      'Manejamos distintos métodos de pago para facilitar tu experiencia: tarjetas de crédito (Visa y Mastercard), tarjetas de débito, transferencias electrónicas y pagos en efectivo.',
   },
   {
-    question: '¿Realizan entregas a domicilio?',
-    answer: 'Sí, realizamos entregas en toda la ciudad y zonas cercanas. Consulta con nosotros por WhatsApp para verificar la cobertura en tu zona.',
+    question: '¿Hacen entregas personales?',
+    answer:
+      'Sí, contamos con amplios puntos de entrega en la ciudad de Guadalajara, Zapopan y Tlaquepaque.',
   },
   {
-    question: '¿Con cuánta anticipación debo hacer mi pedido?',
-    answer: 'Recomendamos hacer tu pedido con al menos 24 horas de anticipación para garantizar disponibilidad y puntualidad en la entrega.',
+    question: '¿Hacen envíos?',
+    answer:
+      'Sí, enviamos a toda la república mexicana. El tiempo de entrega depende de tu ubicación: de 1 a 3 días hábiles (Express) o de 2 a 7 días hábiles (Estándar). Compras a partir de $2,500 MXN tienen envío gratis. No aplica en zona extendida. Aplican restricciones.',
   },
   {
-    question: '¿Puedo personalizar mi arreglo floral?',
-    answer: '¡Claro! Puedes elegir colores, flores preferidas, incluir tarjetas personalizadas o chocolates. Escríbenos por WhatsApp y te ayudamos a crear algo especial.',
+    question: 'Tengo dudas con los decants',
+    answer:
+      'Manejamos un amplio repertorio de fragancias totalmente originales, mililitro por mililitro. Disponibles en presentaciones de 3ml, 5ml y 10ml. (Enlace a Excel)',
   },
   {
-    question: '¿Tienen servicio para eventos especiales?',
-    answer: 'Sí, realizamos arreglos para bodas, cumpleaños, aniversarios, graduaciones y más. Contáctanos para cotizar según tus necesidades.',
+    question: '¿Cómo es el proceso de compra?',
+    answer:
+      '1. Seleccionas tus productos y los añades al carrito de compra.\n2. Se genera una orden y se carga el resumen en el chat.\n3. Realizas el pago y procedemos con el envío.',
   },
   {
-    question: '¿Qué pasa si no estoy en casa cuando llega el pedido?',
-    answer: 'Te contactaremos antes de la entrega. Si no estás, podemos dejarlo con alguien de confianza o reagendar la entrega con un costo adicional.',
-  },
-  {
-    question: '¿Las flores son naturales?',
-    answer: 'Sí, todos nuestros arreglos se elaboran con flores naturales frescas seleccionadas especialmente para cada ocasión.',
+    question: '¿Por qué elegirnos?',
+    answer:
+      'En Perfumería Esencias Gallo tenemos muy presente las necesidades de nuestros clientes. Brindamos un servicio personalizado y a la medida de cada persona. Tu satisfacción es nuestra prioridad.',
   },
 ];
+
 
 const QuestionPage = () => {
   return (

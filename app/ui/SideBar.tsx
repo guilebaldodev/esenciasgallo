@@ -34,7 +34,7 @@ const SideBar = ({toggleSideBar,isSideBarActive}:AdminHeaderProps) => {
         <div className={styles['sidebar-header']}>
           <div className={styles['sidebar-title']}>
             <Image src="/layout/admin/black-logo.png" alt="Logo" width={32} height={32} />
-            <h3>Flores Mx</h3>
+            <h3>Esencias Gallo</h3>
           </div>
 
               <Image

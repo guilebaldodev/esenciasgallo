@@ -2,15 +2,58 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { bullCatalog, flowerCatalog, Product } from "@/consts";
+import {perfumeCatalog, Product } from "@/consts";
 import ProductCard from "../ui/Product";
+import { useEffect, useState } from "react";
+import AboutUs from "../ui/AboutUs";
+
+
+const reviews = [
+  {
+    name: 'Anita S.',
+    role: 'Clienta feliz',
+    rating: 5,
+    text: 'Me encantó la atención y la calidad. Todo llegó en perfectas condiciones.',
+    date: 'hace 2 meses',
+  },
+  {
+    name: 'José L.',
+    role: 'Comprador verificado',
+    rating: 5,
+    text: 'Muy buena experiencia de compra. Todo fue rápido y seguro.',
+    date: 'hace 3 meses',
+  },
+  {
+    name: 'Alan M.',
+    role: 'Comprador verificado',
+    rating: 5,
+    text: 'La página es confiable y los productos huelen increíble. Estoy feliz con mi compra.',
+    date: 'hace 4 meses',
+  },
+];
 
 export default function Home() {
 
-  const message = encodeURIComponent('¡Buenos dias! Me gustaría recibir más información sobre las flores.');
+  const message = encodeURIComponent('¡Buenos dias! Me gustaría recibir más información sobre los perfumes.');
   const whatsAppURL = `https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${message}`;
 
+  const [index, setIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1000)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  const next = () => setIndex((index + 1) % reviews.length)
+  const prev = () => setIndex((index - 1 + reviews.length) % reviews.length)
+
+  const visibleReviews = isMobile ? [reviews[index]] : reviews
+  
 
   return (
     <>
@@ -20,42 +63,25 @@ export default function Home() {
       <div className={styles['hero-container']}>
 <div className={styles['hero-texts']}>
   <h1>
-    Sorprende con un <span className={styles['primary-color']}>Arreglo Floral Único</span>
+    Descubre tu <span className={styles['primary-color']}>Esencia Perfecta</span>
   </h1>
   <h3>
-    En Flores MX creamos ramos y arreglos para cada ocasión: cumpleaños, aniversarios, detalles románticos o simplemente para alegrar el día. Entrega rápida y flores siempre frescas.
+    En Esencias Gallo encontrarás perfumes originales para cada momento especial. Aromas únicos, atención personalizada y envíos a todo México.
   </h3>
-  <Link href="/catalogo">Productos</Link>
+  <Link href="/catalogo">Ver perfumes</Link>
 </div>
 
-        <div className={styles['hero-image']}>
+
+<div className="overlay">
+
+</div>
+
+        {/* <div className={styles['hero-image']}>
           <Image src="/home/header2.png" alt="Hero" width={400} height={400} style={{width:"100%",height:'auto'}} />
-        </div>
+        </div> */}
       </div>
 
-<div className={styles['category-container']}>
 
-  <div className={styles['category-item']}>
-    <Image src="/home/ramo.png" alt="Ramos de flores" width={40} height={40} />
-    <p>Ramos</p>
-  </div>
-
-  <div className={styles['category-item']}>
-    <Image src="/home/florero.png" alt="Arreglos florales" width={40} height={40} />
-    <p>Floreros</p>
-  </div>
-
-  <div className={styles['category-item']}>
-    <Image src="/home/globo.png" alt="Rosas" width={40} height={40} />
-    <p>Globos</p>
-  </div>
-
-  <div className={styles['category-item']}>
-    <Image src="/home/caja.png" alt="Cajas de regalo" width={40} height={40} />
-    <p>Cajas de Regalo</p>
-  </div>
-
-</div>
 
 
       <div className={styles['landing-products']}>
@@ -63,127 +89,64 @@ export default function Home() {
           <h3>Nuestros mejores productos</h3>
         </div>
         <div className={styles['landing-products-container']}>
-          {flowerCatalog && flowerCatalog.map((product:Product,index) => (
+          {perfumeCatalog && perfumeCatalog.map((product:Product,index) => (
             <ProductCard key={index} product={product} />
           ))}
         </div>
       </div>
 
 
-<div className={styles['about-us-testimonials']}>
-  <div className={styles['about-us-titles']}>
-    <h3>Testimonios</h3>
-    <h4>Conoce la experiencia de quienes han confiado en nuestros arreglos florales</h4>
-  </div>
-</div>
 
-<div className={styles['about-testimonial-grid']}>
-
-  <div className={styles['testimonial']}>
-    <div className={styles['about-testimonial']}>
-      <div className={styles['testimonial-circle']}>
-        <Image 
-          src="/bussines/person3.jpg" 
-          alt="Imagen de usuario José Hernández" 
-          width={50} 
-          height={50} 
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            borderRadius: "100%"
-          }}
+    <section className="review-section">
+      <div className="review-background">
+        <Image
+          src="/layout/background2.jpg"
+          alt="Fondo de perfumes"
+          fill
+          priority
+          className="review-bg-image"
         />
       </div>
-      <h3>José Hernández</h3>
-      <h4>Cliente</h4>
-      <p>
-        <q>El ramo que pedí superó mis expectativas. Lo entregaron justo a tiempo y con flores frescas y hermosas.</q>
-      </p>
-    </div>
-    <div className={styles['testimonial-footer']}>
-      <p><strong>Diciembre 2024</strong></p>
-      <p>13:05 pm</p>
-    </div>
-  </div>
 
-  <div className={styles['testimonial']}>
-    <div className={styles['about-testimonial']}>
-      <div className={styles['testimonial-circle']}>
-        <Image 
-          src="/bussines/person.jpg" 
-          alt="Imagen de usuario Lucía Ramírez" 
-          width={50} 
-          height={50} 
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            borderRadius: "100%"
-          }}
-        />
+      <div className="review-overlay">
+        <h2 className="review-title">Opiniones de nuestros clientes</h2>
+
+        <div className="review-carousel">
+          <button className="review-arrow mobile-only" onClick={prev}>◀</button>
+
+          <div className="review-cards-wrapper">
+            {visibleReviews.map((review, i) => (
+              <div key={i} className="review-card">
+                <p className="review-name">{review.name}</p>
+                <p className="review-role">{review.role}</p>
+                <p className="review-stars">{'★'.repeat(review.rating)}<span>/5</span></p>
+                <p className="review-text">{review.text}</p>
+                <p className="review-date">{review.date}</p>
+              </div>
+            ))}
+          </div>
+
+          <button className="review-arrow mobile-only" onClick={next}>▶</button>
+        </div>
       </div>
-      <h3>Lucía Ramírez</h3>
-      <h4>Cliente</h4>
-      <p>
-        <q>Encargué un arreglo personalizado para el aniversario de mis padres y quedó precioso. ¡Gracias por hacerlo tan especial!</q>
-      </p>
-    </div>
-    <div className={styles['testimonial-footer']}>
-      <p><strong>Marzo 2024</strong></p>
-      <p>09:30 am</p>
-    </div>
-  </div>
+    </section>
 
-  <div className={styles['testimonial']}>
-    <div className={styles['about-testimonial']}>
-      <div className={styles['testimonial-circle']}>
-        <Image 
-          src="/bussines/person2.webp" 
-          alt="Imagen de usuario Raúl García" 
-          width={50} 
-          height={50} 
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            borderRadius: "100%"
-          }}
-        />
+
+
+            <AboutUs></AboutUs>
+
+
+        <section className="wa-invite-section">
+      <div className="wa-invite-text">
+        <h2>¿Tienes dudas o quieres hacer un pedido?</h2>
+        <p>Escríbenos directamente por WhatsApp, ¡estamos para ayudarte!</p>
       </div>
-      <h3>Raúl García</h3>
-      <h4>Cliente</h4>
-      <p>
-        <q>Compré una caja de rosas con chocolates para sorprender a mi novia y le encantó. Todo llegó en perfecto estado.</q>
-      </p>
-    </div>
-    <div className={styles['testimonial-footer']}>
-      <p><strong>Abril 2024</strong></p>
-      <p>14:45 pm</p>
-    </div>
-  </div>
 
-</div>
+      <a href={whatsAppURL} target="_blank" rel="noopener noreferrer" className="wa-invite-button">
+        Ir a WhatsApp
+      </a>
+    </section>
 
-
- 
-<div className={styles['fill-banner']}>
-  <h3>
-    Arreglos <span className={styles['primary-color']}>Personalizados</span>
-  </h3>
-  <p>
-    Crea momentos únicos con nuestros arreglos florales hechos a medida. Elige las flores, el estilo y la ocasión,
-    y nosotros nos encargamos del resto. Atención directa por WhatsApp para que tu pedido sea perfecto.
-  </p>
-
-  <a 
-    href={whatsAppURL}
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    ¡Haz tu pedido por WhatsApp!
-  </a>
-</div>
 
 
 

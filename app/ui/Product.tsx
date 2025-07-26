@@ -21,8 +21,7 @@ const ProductCard = ({ product }: ProductCardsProps) => {
 `Hola, quiero comprar este producto:
 *${product.titulo}*
 ${product.categoria}
-Precio: $${formatPrice(product.precio)}
-${process.env.NEXT_PUBLIC_URL}/catalogo/${product.id}`;
+Precio: $${formatPrice(product.precio)}`;
 
   const whatsappUrl = `https://wa.me/${
     process.env.NEXT_PUBLIC_PHONE_NUMBER
@@ -56,21 +55,28 @@ ${process.env.NEXT_PUBLIC_URL}/catalogo/${product.id}`;
               <h3>{product.titulo}</h3>
               <p>{product.categoria}</p>
 
+
+            </div>
+            <div className={styles["card-buttons"]}>
+
+
               <div className={styles["product-card-prices"]}>
+                <div>
+
                 <p className={styles["discount-price"]}>
                   ${formatPrice(product.precio)}
                 </p>
                 {product.anterior && (
                   <p
-                    className={`${styles["normal-price"]} ${styles["discount"]}`}
+                  className={`${styles["normal-price"]} ${styles["discount"]}`}
                   >
                     ${formatPrice(product.anterior)}
                   </p>
                 )}
-              </div>
-            </div>
-            <div className={styles["card-buttons"]}>
-              <button
+                </div>
+
+
+                <button
                 disabled={loading}
                 onClick={(e) => {
                   e.preventDefault();
@@ -84,8 +90,12 @@ ${process.env.NEXT_PUBLIC_URL}/catalogo/${product.id}`;
 
                 }}
               >
-               {loading ? <div className="mini-spinner"></div> : "Agregar al carrito"}
-              </button>
+               {loading ? <div className="mini-spinner"></div> :
+               <Image src={"/layout/white-cart.png"} alt="carrito" width={20} height={20}></Image>
+               }
+              </button> 
+              </div>
+
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -93,7 +103,7 @@ ${process.env.NEXT_PUBLIC_URL}/catalogo/${product.id}`;
                 }}
                 className={styles["whatsapp"]}
               >
-                <img src="/layout/whatsapp-icon.png" alt="whatsapp" />
+                <img src="/layout/whatsapp-white.png" alt="whatsapp" />
                 Comprar ahora
               </button>
             </div>

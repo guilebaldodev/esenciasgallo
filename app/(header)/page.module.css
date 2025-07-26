@@ -1,11 +1,17 @@
 .hero-container{
 
-  width: 90%;
+  /* width: 90%; */
   margin: auto;
   display: flex;
   gap: 15px;
   align-items: center;
   justify-content: space-between;
+  background-image: url(/layout/background.jpg);
+  background-position:center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;  
+
 }
 
 .landing-page{
@@ -26,14 +32,15 @@
 }
 
 .hero-texts{
-  width: 50%;
-  padding: 3rem 0;
+  width: 60%;
+  padding: 3rem;
+  z-index: 2; /* para estar por encima del overlay */
+  color: white;
 
 }
 
 .hero-texts h1{
   font-size: 45px;
-  font-family: 'Fredoka', sans-serif;
   font-weight: 600;
 }
 
@@ -57,10 +64,11 @@
 
 
 .primary-color{
-  color: #DF1E82;
+  color: #3fdfb4;
 }
 
 .category-container{
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 20px;
@@ -70,7 +78,7 @@
 }
 
 .category-item{
-  padding: 26px 20px;
+  padding: 10px 10px;
   border-style: solid;
   border-width: 1px;
   border-color: #ebebeb;
@@ -110,7 +118,6 @@
 .banner-texts h2{
   font-size: 28px;
   padding-bottom: 1.5rem;
-  font-family: 'Fredoka', sans-serif;
   font-weight: 600;
 
 }
@@ -245,7 +252,6 @@
 }
 
 .landing-products-title h3{
-  font-family: 'Fredoka', sans-serif;
   font-weight: 600;
 }
 
@@ -359,7 +365,17 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .hero-texts{
+    width: 70%;
+  }
 
+}
+
+@media (max-width: 100px) {
+
+  .hero-texts{
+    width: 70%;
+  }
 
 }
 
@@ -367,11 +383,11 @@
 @media (max-width: 950px) {
 
     .hero-texts h1{
-      font-size: 35px;
+      font-size: 40px;
     }
 
     .hero-texts h3{
-      font-size: 18px;
+      font-size: 20px;
     }
 
       
@@ -400,30 +416,28 @@
   }
 
 
+
+
 }
 
 
 @media (max-width: 850px) {
 
-  .hero-container{
-    flex-direction: column-reverse;
-  }
 
-  .hero-image{
+  /* .hero-image{
     width: 50%;
-  }
+  } */
 
   .hero-texts{
     width: 100%;
-    padding: 0rem 0rem 3rem;
   }
 
   .hero-texts h1{
-    font-size: 30px;
+    font-size: 35px;
   }
 
   .hero-texts h3{
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .banner{
@@ -515,7 +529,7 @@
   }
 
   .hero-texts h1{
-    font-size: 28px;
+    font-size: 30px;
   }
 
 

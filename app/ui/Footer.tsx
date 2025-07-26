@@ -11,14 +11,14 @@ const Footer = () => {
       <footer className="footer">
             <div className="footer-info">
                 <div className="circle-logotype">
-                    <Image src="/layout/flower.png" alt="Logotipo" width={100} height={100}  />
+                    <Image src="/layout/gallo.png" alt="Logotipo" width={150} height={150}  />
                 </div>
 
                 <div className="footer-section">
-                    <h3>Flores Mx</h3>
+                    <h3>Esencias Gallo</h3>
                     <ul>
                         <li>
-                            <Link href="/catalogo">Catologo</Link>
+                            <Link href="/catalogo">Catalogo</Link>
                         </li>
                         <li>
                             <Link href="/preguntas-frecuentes">Preguntas frecuentes</Link>
@@ -31,11 +31,11 @@ const Footer = () => {
                     <ul>
                         <li>
                             <Image src="/layout/facebook-icon.png" alt="Facebook" width={22} height={22} />
-                            <Link href="">floresmx</Link>
+                            <Link target="_blank" href="https://www.facebook.com/esencias.gallo">Esencias Gallo</Link>
                         </li>
                         <li>
                             <Image src="/layout/instagram-icon.png" alt="Instagram" width={22} height={22} />
-                            <Link href="">floresmxinsta</Link>
+                            <Link target="_blank" href="https://www.instagram.com/esenciasgallo?igsh=MTF6Mmw3ZXkyZzV1bw%3D%3D&utm_source=qr">Esencias Gallo</Link>
                         </li>
                         <li>
                             <Image src="/layout/whatsapp-icon.png" alt="WhatsApp" width={22} height={22} />
@@ -49,7 +49,7 @@ const Footer = () => {
                     <ul>
                         <li>
                             <Image src="/layout/email-icon.png" alt="Email" width={22} height={22} />
-                            <p>floresmx@gmail.com</p>
+                            <p>esenciasgallo@gmail.com</p>
                         </li>
                         <li>
                             <Image src="/layout/phone-icon.png" alt="Teléfono" width={22} height={22} />
@@ -67,11 +67,12 @@ const Footer = () => {
 
             <div className="footer-developer">
                 
-                <p>
-                    Copyright FloresMx - 2025. Todos los derechos reservados.
-                </p>
+<p>
+  Copyright Esencias Gallo - 2025. Todos los derechos reservados.
+</p>
+
             
-                <p>Contacta al programador: 74431121923</p>
+                <p><Link style={{textDecoration:"underline"}} href={"https://portfolio-flame-nu-34.vercel.app/"}>Contacta al programador</Link></p>
             </div>
         </footer>  
     </> );

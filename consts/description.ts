@@ -1,13 +1,13 @@
-export const flowerDescription = `
+export const perfumeDescription = `
   <div class="product-detail-property">
-    <h4>Medidas</h4>
-    <p>Medidas referenciales según el tipo de arreglo</p>
+    <h4>Presentación</h4>
+    <p>Frasco de vidrio de alta calidad con atomizador. Tamaño estándar de 100 ml.</p>
   </div>
 
   <div class="product-detail-property">
-    <h4>Flores</h4>
+    <h4>Notas olfativas</h4>
     <p>
-      Combinación de flores frescas como rosas, girasoles, tulipanes, entre otras, según la categoría del producto.
+      Fragancia compuesta por notas de salida, corazón y fondo. Varían según la marca e incluyen esencias como bergamota, cedro, vainilla, lavanda, ámbar, entre otras.
     </p>
   </div>
 
@@ -15,17 +15,16 @@ export const flowerDescription = `
     <h4>Descripción</h4>
     <p>
       Esta es una descripción de demostración. Los administradores del sistema podrán escribir descripciones detalladas
-      como esta, personalizando cada producto con medidas, tipos de flores, recomendaciones y cualquier otro dato relevante
-      para sus clientes.
+      como esta, personalizando cada perfume con información sobre la duración, la familia olfativa, recomendaciones de uso y más.
     </p>
   </div>
 
   <div class="product-detail-include">
     <h4>Este producto puede incluir</h4>
     <ul>
-      <li>Arreglo floral o ramo</li>
-      <li>Florero o base decorativa</li>
-      <li>Tarjeta personalizada</li>
+      <li>Perfume 100% original</li>
+      <li>Caja sellada de fábrica</li>
+      <li>Etiqueta de autenticidad</li>
     </ul>
   </div>
 `;

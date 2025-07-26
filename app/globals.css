@@ -154,12 +154,11 @@ input,button,textarea,select{
 }
 
 .footer{
-  background-color:#DF1E82;
+  background-color:#ECECEC;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   min-height: 40vh;
-  color: white;
   justify-content: space-between;
 }
 
@@ -197,6 +196,7 @@ input,button,textarea,select{
   font-size: 20px;
   font-family: 'Fredoka', sans-serif;
   font-weight: 500;
+  color:#366055;
 
 }
 
@@ -207,6 +207,8 @@ input,button,textarea,select{
 .footer-section img{
   margin-right: 10px;
 }
+
+.f
 
 .footer-section ul li a,.footer-section ul li p{
   text-decoration: none;
@@ -365,7 +367,7 @@ summary{
 .accordion-plus{
   font-weight: 600;
   font-size: 28px;
-  color: #016FDC;
+  color: #366055;
   padding-left: 1rem;
 }
 
@@ -604,6 +606,184 @@ summary{
 
 
 
+/*  */
+
+.review-section {
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.review-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: white;
+}
+
+.review-bg-image {
+  object-fit: cover;
+  filter: brightness(0.3);
+  z-index: 0;
+}
+
+.review-background img{
+  max-height: 70vh !important;
+}
+
+.review-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.review-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.review-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.review-cards-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.review-card {
+  background: white;
+  color: #333;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.review-role {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.review-stars {
+  color: gold;
+  font-size: 1rem;
+}
+
+.review-stars span {
+  color: #333;
+}
+
+.review-text {
+  margin: 1rem 0;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.review-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.review-arrow:hover {
+  transform: scale(1.2);
+}
+
+.mobile-only {
+  display: none;
+}
+
+
+
+/*  */
+
+
+.wa-invite-section {
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  gap: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.wa-invite-text h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #222;
+  text-align: center;
+}
+
+.wa-invite-text p {
+  margin-top: 0.5rem;
+  color: #666;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.wa-invite-button {
+  background-color: #25D366;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.wa-invite-button:hover {
+  background-color: #1ebe5d;
+}
+
+/* @media (max-width: 600px) {
+  .wa-invite-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wa-invite-button {
+    width: 100%;
+  }
+}
+ */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* oscurece ligeramente */
+  z-index: 1;
+}
+
+
 
 @media (max-width: 950px) {
   
@@ -616,10 +796,22 @@ summary{
     font-size: 30px;
   }
 
-  
-  
+}
 
 
+@media (max-width: 1000px) {
+  .review-cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 90%;
+  }
+
+  .mobile-only {
+    display: inline;
+  }
 }
 
 
@@ -660,7 +852,13 @@ summary{
     font-size: 18px;
   }
 
+    .wa-invite-section{
+    gap: 2rem;
+  }
 
+  .review-title{
+    font-size: 25px;
+  }
   
 
 }
@@ -675,14 +873,103 @@ summary{
     width: 95%;
   }
 
-}
-  
+  .wa-invite-text h2{
+    font-size: 28px;
+  }
 
+}
+
+
+/*  Avoyt us */
+  .about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-number {
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.about-title span {
+  color: #366055;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-paragraph {
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-button {
+  display: inline-block;
+  background-color: #366055;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.about-button:hover {
+  background-color: #366055;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 280px;
+}
+
+.about-image-bg {
+
+    background-color: #E8F5E9;
+
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-product {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*  */
 @media (max-width: 550px) {
   
   .footer-info{
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
 
   .circle-logotype{
@@ -715,9 +1002,58 @@ summary{
     margin-right: 1rem;
   }
 
+  .review-background img{
+  max-height: 90vh !important;
+}
+
+
+
+
 
  
 
 }
 
+
+
+@media (min-width: 1000px) {
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 3rem 4rem;
+  }
+
+  .about-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.1rem;
+  }
+
+  .about-image-bg {
+    flex: 1;
+    padding: 3rem;
+  }
+
+  .about-image-bg img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+  }
+
+  .see-more-button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+}
 
