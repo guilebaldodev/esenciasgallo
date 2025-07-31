@@ -628,7 +628,7 @@ summary{
 }
 
 .review-background img{
-  max-height: 70vh !important;
+  max-height: 50vh !important;
 }
 
 .review-overlay {
@@ -668,6 +668,16 @@ summary{
   text-align: left;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+
+.review-card img{
+  aspect-ratio: 1/1;
 }
 
 .review-name {
@@ -783,6 +793,17 @@ summary{
   z-index: 1;
 }
 
+
+
+
+@media (max-width: 1275px) {
+  
+  .review-card:nth-child(4) {
+    display: none;
+  }
+
+
+}
 
 
 @media (max-width: 950px) {

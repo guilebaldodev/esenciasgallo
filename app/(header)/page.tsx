@@ -6,39 +6,29 @@ import {perfumeCatalog, Product } from "@/consts";
 import ProductCard from "../ui/Product";
 import { useEffect, useState } from "react";
 import AboutUs from "../ui/AboutUs";
+import { useRouter } from 'next/navigation';
 
 
-const reviews = [
-  {
-    name: 'Anita S.',
-    role: 'Clienta feliz',
-    rating: 5,
-    text: 'Me encantó la atención y la calidad. Todo llegó en perfectas condiciones.',
-    date: 'hace 2 meses',
-  },
-  {
-    name: 'José L.',
-    role: 'Comprador verificado',
-    rating: 5,
-    text: 'Muy buena experiencia de compra. Todo fue rápido y seguro.',
-    date: 'hace 3 meses',
-  },
-  {
-    name: 'Alan M.',
-    role: 'Comprador verificado',
-    rating: 5,
-    text: 'La página es confiable y los productos huelen increíble. Estoy feliz con mi compra.',
-    date: 'hace 4 meses',
-  },
+const brands = [
+  { name: 'Yves Saint Laurent', image: '/home/brands/YVES.webp' },
+  { name: 'Armaf', image: '/home/brands/armaf.webp' },
+  { name: 'Hawas', image: '/home/brands/hawas.webp' },
+  { name: 'Valentino', image: '/home/brands/valentino.png' },
 ];
+
 
 export default function Home() {
 
   const message = encodeURIComponent('¡Buenos dias! Me gustaría recibir más información sobre los perfumes.');
   const whatsAppURL = `https://wa.me/${process.env.NEXT_PUBLIC_PHONE_NUMBER}?text=${message}`;
 
-  const [index, setIndex] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
+const [index, setIndex] = useState(0);
+const [isMobile, setIsMobile] = useState(false);
+
+const next = () => setIndex((index + 1) % brands.length);
+const prev = () => setIndex((index - 1 + brands.length) % brands.length);
+
+const visibleBrands = isMobile ? [brands[index]] : brands;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -49,11 +39,10 @@ export default function Home() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  const next = () => setIndex((index + 1) % reviews.length)
-  const prev = () => setIndex((index - 1 + reviews.length) % reviews.length)
 
-  const visibleReviews = isMobile ? [reviews[index]] : reviews
-  
+
+    const router = useRouter();
+
 
   return (
     <>
@@ -62,19 +51,32 @@ export default function Home() {
 
       <div className={styles['hero-container']}>
 <div className={styles['hero-texts']}>
+  <span>#tenemosloquebuscas</span>
   <h1>
-    Descubre tu <span className={styles['primary-color']}>Esencia Perfecta</span>
+    PERFUMERIA
+    <br/>
+    ESENCIAS
+    <br/>
+    GALLO
   </h1>
   <h3>
-    En Esencias Gallo encontrarás perfumes originales para cada momento especial. Aromas únicos, atención personalizada y envíos a todo México.
+    ENVIOS A TODO EL PAIS - PRECIOS PARA TÚ NEGOCIO
   </h3>
-  <Link href="/catalogo">Ver perfumes</Link>
+  <Image onClick={()=>{
+    
+    router.push('/catalogo'); 
+
+
+  }} src="/layout/gallo.png" alt="Logotipo" width={150} height={150}  />
+
+
+
 </div>
 
-
+{/* 
 <div className="overlay">
 
-</div>
+</div> */}
 
         {/* <div className={styles['hero-image']}>
           <Image src="/home/header2.png" alt="Hero" width={400} height={400} style={{width:"100%",height:'auto'}} />
@@ -109,22 +111,28 @@ export default function Home() {
       </div>
 
       <div className="review-overlay">
-        <h2 className="review-title">Opiniones de nuestros clientes</h2>
+        <h2 className="review-title">Nuestras marcas</h2>
 
         <div className="review-carousel">
           <button className="review-arrow mobile-only" onClick={prev}>◀</button>
 
-          <div className="review-cards-wrapper">
-            {visibleReviews.map((review, i) => (
-              <div key={i} className="review-card">
-                <p className="review-name">{review.name}</p>
-                <p className="review-role">{review.role}</p>
-                <p className="review-stars">{'★'.repeat(review.rating)}<span>/5</span></p>
-                <p className="review-text">{review.text}</p>
-                <p className="review-date">{review.date}</p>
-              </div>
-            ))}
-          </div>
+<div className="review-cards-wrapper">
+  {visibleBrands.map((brand, i) => (
+    <div 
+    
+    onClick={() => router.push(`/catalogo?busqueda=${encodeURIComponent(brand.name)}`)}
+    key={i} className="review-card brand-card">
+      <Image
+        src={brand.image}
+        alt={brand.name}
+        width={150}
+        height={150}
+        className="brand-logo"
+      />
+    </div>
+  ))}
+</div>
+
 
           <button className="review-arrow mobile-only" onClick={next}>▶</button>
         </div>
