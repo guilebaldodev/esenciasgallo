@@ -94,7 +94,7 @@ const AddProduct = () => {
                 <div className={styles.upload_items}>
                   <div className={styles.upload_item}>
                     <div className={styles.upload_info}>
-                      <Image src={"/products/flowers/product-1/product-1-1.webp"} height={36} width={36} alt="" />
+                      <Image src={"/products/perfum/product-1/product-1-1.jpg"} height={36} width={36} alt="" />
                       <div className={styles.upload_info_texts}>
                         <p className={styles.grey}>producto.png</p>
                         <p>97.KB</p>
@@ -105,7 +105,8 @@ const AddProduct = () => {
 
                   <div className={styles.upload_item}>
                     <div className={styles.upload_info}>
-                      <Image src={"/products/flowers/product-1/product-1-2.webp"} height={36} width={36} alt="" />
+                                            <Image src={"/products/perfum/product-1/product-1-1.jpg"} height={36} width={36} alt="" />
+
                       <div className={styles.upload_info_texts}>
                         <p className={styles.grey}>producto2.png</p>
                         <p>97.KB</p>
@@ -114,16 +115,7 @@ const AddProduct = () => {
                     <Image src={"/admin/x.png"} height={15} width={15} alt="x" />
                   </div>
 
-                  <div className={styles.upload_item}>
-                    <div className={styles.upload_info}>
-                                            <Image src={"/products/flowers/product-2/product-2-1.webp"} height={36} width={36} alt="" />
-                      <div className={styles.upload_info_texts}>
-                        <p className={styles.grey}>producto3.png</p>
-                        <p>97.KB</p>
-                      </div>
-                    </div>
-                    <Image src={"/admin/x.png"} height={15} width={15} alt="x" />
-                  </div>
+
                 </div>
               </div>
 

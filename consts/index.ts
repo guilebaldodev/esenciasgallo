@@ -110,67 +110,82 @@ export const categoryOptions = [
   { value: "Jean Paul Gaultier", label: "Jean Paul Gaultier" },
 ];
 
-export const flowerSales = [
+export const perfumeSales = [
   {
     id: 1,
-    titulo: "Ramo de 100 Rosas Rojas",
-    descripcion: "Ramos",
-    precio: 1800,
-    img: "/products/flowers/product-1/product-1-1.webp",
+    titulo: "Dior Sauvage Eau de Toilette 100ml",
+    descripcion: "Dior",
+    precio: 2200,
+    img: "/products/perfum/product-1/product-1-1.jpg",
     estado: "pagado",
-    fecha: "05/06/2025",
+    fecha: "05/07/2025",
     color: "green",
   },
   {
-    id: 5,
-    titulo: "Florero de Gerberas y Girasoles",
-    descripcion: "Floreros",
-    precio: 920,
-    img: "/products/flowers/product-5/product-5-1.webp",
+    id: 2,
+    titulo: "Yves Saint Laurent Y EDT 100ml",
+    descripcion: "YSL",
+    precio: 2400,
+    img: "/products/perfum/product-1/product-1-1.jpg",
     estado: "pagado",
-    fecha: "06/06/2025",
+    fecha: "06/07/2025",
     color: "green",
   },
   {
-    id: 7,
-    titulo: "Globo Burbuja de 24",
-    descripcion: "Globos",
-    precio: 900,
-    img: "/products/flowers/product-7/product-7-1.webp",
+    id: 3,
+    titulo: "Chanel Bleu de Chanel Parfum 100ml",
+    descripcion: "Chanel",
+    precio: 2700,
+    img: "/products/perfum/product-1/product-1-1.jpg",
     estado: "pendiente",
-    fecha: "06/06/2025",
+    fecha: "07/07/2025",
     color: "gold",
   },
   {
-    id: 10,
-    titulo: "Caja de Rosas Amarillas",
-    descripcion: "Cajas",
-    precio: 1950,
-    img: "/products/flowers/product-10/product-10-1.webp",
+    id: 4,
+    titulo: "Jean Paul Gaultier Le Male 125ml",
+    descripcion: "Jean Paul Gaultier",
+    precio: 2650,
+    img: "/products/perfum/product-1/product-1-1.jpg",
     estado: "cancelado",
-    fecha: "07/06/2025",
+    fecha: "08/07/2025",
     color: "red",
   },
 ];
 
 
-
-export const flowerCategories = [
+export const perfumeCategories = [
   {
-    nombre: "Ramos",
-    productos: 4,
+    nombre: "Dior",
+    productos: 1,
   },
   {
-    nombre: "Floreros",
-    productos: 2,
+    nombre: "Chanel",
+    productos: 1,
   },
   {
-    nombre: "Globos",
-    productos: 2,
+    nombre: "Versace",
+    productos: 1,
   },
   {
-    nombre: "Cajas",
-    productos: 2,
+    nombre: "YSL",
+    productos: 1,
+  },
+  {
+    nombre: "Carolina Herrera",
+    productos: 1,
+  },
+  {
+    nombre: "Paco Rabanne",
+    productos: 1,
+  },
+  {
+    nombre: "Montblanc",
+    productos: 1,
+  },
+  {
+    nombre: "Jean Paul Gaultier",
+    productos: 1,
   },
 ];
 
@@ -229,21 +244,20 @@ export const salesBarChart={
         },
       ],
 }
-
 export const salesPieChart = {
   options: {
     chart: {
       type: "pie",
     },
-  labels: ['Ramos', 'Floreros', 'Globos', 'Cajas'],
-    colors: ['#4CAF50', '#FF9800', '#2196F3', '#9C27B0'], // Colores personalizados más vibrantes
+    labels: ['Armaf', 'Hawas', 'Yves Saint Laurent', 'Jean Paul Gaultier'],
+    colors: ['#be9c6f', '#000000', '#f7f776', '#888888'], // tus colores + neutros
     legend: {
-      position: "top", // Coloca los labels arriba del gráfico
+      position: "top",
       horizontalAlign: "center",
     }
   },
-  
-  series: [30, 45, 20, 60] // Datos representando productos vendidos por cada categoría
+
+  series: [40, 25, 15, 20] // Ejemplo de cantidades vendidas por marca
 };
 
 
@@ -254,41 +268,38 @@ export const salesLineChart = {
     },
 
     xaxis: {
-      categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'], // Meses abreviados
+      categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
     },
     stroke: {
-      curve: "smooth", // Líneas suaves
-      width: [4, 4, 4, 4] // Grosor de cada línea
+      curve: "smooth",
+      width: [4, 4, 4, 4],
     },
     markers: {
-      size: 4, // Tamaño de los puntos en las líneas
+      size: 4,
     },
-    colors: ['#1E90FF', '#32CD32', '#FF8C00', '#8A2BE2'], // Colores personalizados para cada categoría
+    colors: ['#be9c6f', '#000000', '#f7f776', '#888888'], // Colores de tu marca + neutros
     legend: {
       position: "top",
       horizontalAlign: "center",
     }
   },
-  
 
   series: [
     {
-      name: "Ramos",
-      data: [32, 45, 38, 60, 50, 47, 65, 55, 70, 40, 62, 75] // Ventas mensuales para "Toro"
+      name: "Armaf",
+      data: [12, 18, 25, 30, 28, 35, 40, 38, 45, 42, 48, 50]
     },
     {
-      name: "Floreros",
-      data: [23, 28, 22, 34, 29, 51, 40, 57, 30, 69, 52, 63] // Ventas mensuales para "Inflables"
+      name: "Hawas",
+      data: [8, 14, 20, 22, 24, 30, 35, 33, 36, 38, 40, 42]
     },
     {
-      name: "Globos",
-      data: [12, 15, 20, 18, 30, 25, 43, 37, 42, 38, 55, 50] // Ventas mensuales para "Accesorios"
+      name: "Yves Saint Laurent",
+      data: [5, 8, 12, 18, 22, 20, 25, 27, 30, 28, 35, 37]
     },
     {
-      name: "Cajas",
-      data: [27, 30, 45, 35, 55, 52, 63, 60, 65, 50, 42, 72] // Ventas mensuales para "Refacciones"
+      name: "Jean Paul Gaultier",
+      data: [10, 15, 20, 23, 26, 30, 34, 36, 38, 40, 43, 45]
     }
   ]
-  
-
 };

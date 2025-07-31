@@ -57,7 +57,10 @@
   font-size: 20px;
   color: #be9c6f;
   font-weight: 400;
+}
 
+.hero-texts img{
+  cursor: pointer;
 }
 
 .hero-texts a{
